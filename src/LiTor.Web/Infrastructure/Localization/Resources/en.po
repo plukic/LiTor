@@ -1,0 +1,94 @@
+﻿#Translation entries for bs culture
+msgid "Dashboard"
+msgstr "Dashboard"
+
+
+msgid "News"
+msgstr "News"
+
+msgid "TeamMembers"
+msgstr "Team members"
+
+msgid "Settings"
+msgstr "Settings"
+
+msgid "Profile"
+msgstr "My Profile"
+
+msgid "SignOut"
+msgstr "Sign out"
+
+
+
+
+msgid "Username"
+msgstr "Username"
+
+msgid "Password"
+msgstr "Password"
+
+
+msgid "PasswordChangedSuccessfully"
+msgstr "Password changed successfully"
+
+
+msgid "PasswordMismatch"
+msgstr "Password missmatch successfully"
+
+msgid "EditProfile"
+msgstr "Edit Profile"
+
+
+msgid "PhoneNumber"
+msgstr "Phone number"
+
+
+msgid "EmailSlashUsername"
+msgstr "Enter email"
+
+
+msgid "PasswordHint"
+msgstr "Enter password"
+
+
+
+msgid "InvalidLoginData"
+msgstr "Invalid login data"
+
+msgid "RememberMe"
+msgstr "Remember me"
+
+
+msgid "AccountRequiresEmailConfirmation"
+msgstr "Account required email confirmation"
+
+msgid "AccountLockedOut"
+msgstr "Account locked out"
+
+msgid "Access denied"
+msgstr "Access denied"
+
+msgid "AccessDeniedMessage"
+msgstr "Access denied"
+
+
+msgid "AccountNotAllowed"
+msgstr "Account not allowed"
+
+msgid "AccountRequiresTwoFactor"
+msgstr "Account requires two factor authentication"
+
+msgid "ResendConfirmationEmail"
+msgstr "Resend confirmation email"
+
+msgid "Visit"
+msgstr "visit"
+
+msgid "ProblemsWithSignInQuestion"
+msgstr "Problems with sign in?"
+
+msgid "ContactAdmin"
+msgstr "contact admin"
+
+msgid "SignIn"
+msgstr "Sign in"

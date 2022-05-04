@@ -1,0 +1,79 @@
+﻿@using LiTor.Web.Components
+@model LiTor.Web.Models.Account.AccountSignInViewModel
+@{
+    Layout = null;
+    var currentTitle = ViewData.GetPageTitle();
+    var title = !string.IsNullOrEmpty(currentTitle) ? currentTitle + " / " : "";
+    title += WebAppConfig.GeneralSettings.ApplicationName;
+    var currentTitleIcon = ViewData.GetPageTitleIcon();
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta translate="no" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>@title</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <partial name="_Favicons" />
+    <partial name="_Styles" />
+    <partial name="_HeadScripts" />
+</head>
+
+
+<body class="login-page">
+    <div class="login-box">
+        <div class="card">
+            <div class="card-body login-card-body">
+                <p class="login-box-msg">Sign in to start your session</p>
+                <form asp-action="SignIn" method="post">
+                    <input asp-for="@Model.ReturnUrl" type="hidden" />
+                    <div class="input-group mb-3">
+                        <input asp-for="Username" class="form-control">
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span class="fas fa-envelope"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input-group mb-3">
+                        <input asp-for="Password" class="form-control">
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span class="fas fa-lock"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <partial name="_ValidationSummary" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-8">
+                            <div class="icheck-primary">
+                                <input asp-for="RememberMe">
+                                <label asp-for="RememberMe">
+                                    @Localizer[LocalizationKeys.RememberMe]
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="col-4">
+                            <button type="submit" class="btn btn-primary btn-block">
+                                @Localizer[LocalizationKeys.SignIn]
+                            </button>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+
+    <partial name="_BodyScripts" />
+
+</body>
+</html>

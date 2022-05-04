@@ -1,0 +1,69 @@
+﻿
+<style>
+    a.nav-link{
+        display:flex;
+        flex-direction:row;
+        flex-wrap:nowrap;
+        gap:0.5rem;
+        align-items:center;
+        justify-content:flex-start;
+    }
+</style>
+<aside class="main-sidebar sidebar-dark-primary sidebar-no-expand">
+    <a asp-action="Index" asp-controller="Home" class="brand-link">
+        <span class="brand-text font-weight-light">@WebAppConfig.GeneralSettings.ApplicationClientFacingName</span>
+    </a>
+
+
+    <div class="sidebar">
+        <nav class="mt-4">
+            <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                <li class="nav-item">
+                    <a asp-controller="Home" asp-action="Index" data-nav-link-name="@NavMenuItemNames.Dashboard" class="nav-link ">
+                        <i class="fas fa-home"></i>
+                        <p>
+                            @Localizer[LocalizationKeys.Dashboard]
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a asp-controller="Home" asp-action="Index" data-nav-link-name="@NavMenuItemNames.Products" class="nav-link">
+                        <i class="nav-icon fas fa-box"></i>
+                        <p>
+                            @Localizer[LocalizationKeys.Products]
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a asp-controller="TeamMembers" asp-action="Index" data-nav-link-name="@NavMenuItemNames.Licenses" class="nav-link">
+                        <i class="nav-icon fas fa-lock"></i>
+                        <p>
+                            @Localizer[LocalizationKeys.Licenses]
+                        </p>
+                    </a>
+                </li>
+              
+            </ul>
+        </nav>
+    </div>
+    <script>
+        $(function () {
+            var activeItemName = '@Html.Raw(ViewData.GetActiveNavMenuItem())';
+            if (activeItemName) {
+                activeItemName = activeItemName.split('.');
+                var $navItems = $('.nav-sidebar .nav-item .nav-link');
+                var $targetNavItems = $navItems.filter(function (e) {
+                    if (activeItemName.indexOf($(this).data('navLinkName')) > -1) {
+                        return $(this);
+                    }
+                });
+                if ($targetNavItems.length > 0) {
+                    $targetNavItems.addClass('active');
+                    if ($targetNavItems.attr('href') === '#') {
+                        $targetNavItems.parent().addClass('menu-open');
+                    }
+                }
+            }
+        });
+    </script>
+</aside>

@@ -1,0 +1,36 @@
+.flag-icon-background {
+    background-size: contain;
+    background-position: 50%;
+    background-repeat: no-repeat;
+}
+.flag-nav-link{
+    padding:0 !important;
+}
+.flag-icon {
+    background-size: contain;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    position: relative;
+    display: inline-block;
+    width: 2rem;
+    line-height: 1em;
+}
+.flag-dropdown-item{
+    margin-bottom:0.5rem;
+}
+
+    .flag-icon:before {
+        content: "\00a0";
+    }
+
+    .flag-icon.flag-icon-squared {
+        width: 1em;
+    }
+
+.flag-icon-bhs {
+    background-image: url(flags/flags/4x3/bs.svg);
+}
+
+.flag-icon-en {
+    background-image: url(flags/flags/4x3/en.svg);
+}

@@ -1,0 +1,41 @@
+﻿<style>
+    .profile-photo {
+        width: 35px;
+        height: 35px;
+        object-fit: contain;
+        border-radius: 6px;
+    }
+</style>
+
+<nav class="main-header navbar navbar-expand navbar-white navbar-light">
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+        </li>
+    </ul>
+    <ul class="navbar-nav ml-auto">
+        @(await Component.InvokeAsync<LanguageMenu>())
+        <li class="nav-item dropdown">
+            <a class="nav-link" data-toggle="dropdown" href="#" aria-expanded="false">
+                <img class="profile-photo" src="~/img/avatars/demo-avatar.png" asp-append-version="true" />
+            </a>
+            <div class="dropdown-menu  dropdown-menu-right" style="left: inherit; right: 0px;">
+                <a href="#" class="dropdown-item">
+                    <i class="icon-icons-user"></i>
+                    <span>
+                        @Localizer[LocalizationKeys.Profile]
+                    </span>
+                </a>
+                <div class="dropdown-divider"></div>
+                <a asp-action="SignOut" asp-controller="Account" class="dropdown-item">
+                    <i class="icon-icons-logout"></i>
+                    <span>
+                        @Localizer[LocalizationKeys.SignOut]
+                    </span>
+                </a>
+
+            </div>
+        </li>
+
+    </ul>
+</nav>

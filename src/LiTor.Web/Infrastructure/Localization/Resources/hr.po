@@ -1,0 +1,98 @@
+﻿#Translation entries for bs culture
+msgid "Dashboard"
+msgstr "Kontrolna ploča"
+
+
+msgid "News"
+msgstr "Novosti"
+
+msgid "TeamMembers"
+msgstr "Tim"
+
+msgid "Settings"
+msgstr "Postavke"
+
+
+msgid "Profile"
+msgstr "Korisnički račun"
+
+msgid "SignOut"
+msgstr "Odjava"
+
+
+
+
+
+msgid "Username"
+msgstr "Korisničko ime"
+
+msgid "Password"
+msgstr "Lozinka"
+
+
+msgid "PasswordChangedSuccessfully"
+msgstr "Lozinka uspješno promijenjena"
+
+
+msgid "PasswordMismatch"
+msgstr "Lozinke se razlikuju"
+
+msgid "EditProfile"
+msgstr "Izmjeni korisnički račun"
+
+
+msgid "PhoneNumber"
+msgstr "Broj telefona"
+
+
+msgid "EmailSlashUsername"
+msgstr "Upišite email"
+
+
+msgid "PasswordHint"
+msgstr "Upišite lozinku"
+
+
+
+msgid "InvalidLoginData"
+msgstr "Pristupni podaci nisu ispravni."
+
+msgid "RememberMe"
+msgstr "Zapamti me"
+
+msgid "AccountRequiresEmailConfirmation"
+msgstr "Za prijavu je potreban 2FA"
+
+msgid "AccountLockedOut"
+msgstr "Korisnički račun je zaključan"
+
+msgid "Access denied"
+msgstr "Pristup nije dozvoljen."
+
+msgid "AccessDeniedMessage"
+msgstr "Pristup nije dozvoljen."
+
+
+msgid "AccountNotAllowed"
+msgstr "Korisnički račun nema pravo pristupa."
+
+msgid "AccountRequiresTwoFactor"
+msgstr "Korisnički račun zahtjeva 2FA."
+
+msgid "ResendConfirmationEmail"
+msgstr "Ponovo pošalji email za potvrdu korisničkog računa."
+
+
+
+msgid "Visit"
+msgstr "posjeti"
+
+msgid "ProblemsWithSignInQuestion"
+msgstr "Problemi sa prijavom?"
+
+msgid "ContactAdmin"
+msgstr "admin kontakt"
+
+
+msgid "SignIn"
+msgstr "Prijavi se"

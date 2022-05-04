@@ -1,0 +1,12 @@
+﻿@using LiTor.Web.Views.Shared;
+@using LiTor.Web.Components;
+@using LiTor.Core.Localization;
+
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@addTagHelper *, BundlerMinifier.TagHelpers
+@addTagHelper *, Aluminij.Web
+
+
+@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer Localizer
+@inject Microsoft.AspNetCore.Authorization.IAuthorizationService AuthorizationService
+@inject LiTor.Web.Configuration.WebAppConfiguration WebAppConfig

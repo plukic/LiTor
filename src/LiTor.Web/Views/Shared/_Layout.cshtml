@@ -1,0 +1,52 @@
+﻿@using LiTor.Web.Components
+@{
+    var currentTitle = ViewData.GetPageTitle();
+    var title = !string.IsNullOrEmpty(currentTitle) ? currentTitle + " / " : "";
+    title += WebAppConfig.GeneralSettings.ApplicationName;
+    var currentTitleIcon = ViewData.GetPageTitleIcon();
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta translate="no" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>@title</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <partial name="_Favicons" />
+    <partial name="_Styles" />
+    @await RenderSectionAsync("Styles", required: false)
+    <partial name="_HeadScripts" />
+
+</head>
+<body class="sidebar-mini layout-fixed control-sidebar-slide-open layout-navbar-fixed ">
+    <div class="glass-blur-bottom-left"></div>
+    <div class="glass-blur-top-right"></div>
+    <div class="wrapper">
+        <partial name="_HeaderMenu" />
+        @(await Component.InvokeAsync<NavigationMenu>())
+        <div class="content-wrapper">
+            <div class="content-header">
+                <div class="content-breadcrumbs">
+                    @await RenderSectionAsync("Breadcrumbs", required: false)
+                </div>
+            </div>
+            <section class="content">
+                <div class="container-fluid">
+                    @RenderBody()
+                </div>
+            </section>
+        </div>
+    </div>
+    <div id="modal-container" class="modal fade" data-backdrop="static" data-keyboard="false">
+        <div class="modal-dialog" id="main-modal">
+            <div class="modal-content">
+            </div>
+        </div>
+    </div>
+    <partial name="_BodyScripts" />
+    @await RenderSectionAsync("Scripts", required: false)
+    <partial name="_BootstrapSetupScripts" />
+
+</body>
+</html>

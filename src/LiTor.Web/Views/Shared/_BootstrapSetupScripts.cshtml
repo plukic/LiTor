@@ -1,0 +1,33 @@
+﻿<script type="text/javascript">
+    $(function () {
+        $('#modal-container').on('show.bs.modal',
+            function (event) {
+                var button = $(event.relatedTarget),
+                    url = button.attr("href"),
+                    modal = $(this),
+                    size = button.data("modal-size"),
+                    position = button.data("modal-position");
+
+                modal.find('#main-modal')
+                    .prop('class', 'modal-dialog modal-simple').addClass('modal-' + size).addClass('modal-' + position);
+
+                var modalContent = modal.find('.modal-content');
+                modalContent.load(url);
+            });
+
+        $('#modal-container').on('hidden.bs.modal',
+            function () {
+                $(this).removeData('bs.modal');
+                $('#modal-container .modal-content').empty();
+            });
+
+        $("body").tooltip({
+            selector: '[data-toggle="tooltip"]'
+        });
+
+        $("body").popover({
+            selector: '[data-toggle="popover"]',
+            trigger: 'focus'
+        });
+    });
+</script>
